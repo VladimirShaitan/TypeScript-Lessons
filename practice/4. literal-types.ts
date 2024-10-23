@@ -1,0 +1,37 @@
+// Приклад 1:
+
+type Color = "red" | "green" | "blue";
+
+function setColor(color: Color) {
+    console.log(`Color set to: ${color}`);
+}
+
+setColor("red");
+// setColor("yellow"); // Помилка: значення "yellow" не входить до типу Color
+
+
+/*-----------------------------------------------------------------
+Приклад 2: Використання Literal Types у функціях
+ -----------------------------------------------------------------*/
+type LogLevel = "info" | "warning" | "error";
+
+function log(message: string, level: LogLevel) {
+    console.log(`[${level.toUpperCase()}] ${message}`);
+}
+
+log("This is an info message", "info");
+log("This is an error message", "error");
+// log("This is a debug message", "debug"); // Помилка: значення "debug" не входить до типу LogLevel
+
+
+/*-----------------------------------------------------------------
+Приклад 3: Комбінування Literal Types з Union Types
+ -----------------------------------------------------------------*/
+type HTTPMethod = "GET" | "POST" | "PUT" | "DELETE";
+
+function makeRequest(method: HTTPMethod, url: string) {
+    console.log(`Making ${method} request to ${url}`);
+}
+
+makeRequest("GET", "https://api.example.com");
+// makeRequest("PATCH", "https://api.example.com"); // Помилка: значення "PATCH" не входить до типу HTTPMethod
