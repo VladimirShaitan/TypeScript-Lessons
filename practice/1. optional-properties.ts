@@ -1,13 +1,13 @@
 // Приклад 1:
 
-interface Car {
-    make: string;
-    model: string;
-    year?: number; // Опціональна властивість
-}
-
-const car1: Car = { make: "Toyota", model: "Corolla" }; // year відсутня
-const car2: Car = { make: "Honda", model: "Civic", year: 2020 }; // year присутня
+// interface Car {
+//     make: string;
+//     model: string;
+//     year?: number; // Опціональна властивість
+// }
+//
+// const car1: Car = { make: "Toyota", model: "Corolla" }; // year відсутня
+// const car2: Car = { make: "Honda", model: "Civic", year: 2020 }; // year присутня
 
 /* ------------------------------------------------------------
 Приклад 2: Використання опціональних властивостей в функціях
@@ -19,6 +19,12 @@ interface Settings {
 }
 
 function configureSettings(settings: Settings) {
+    // console.log(settings.volume + 20)
+
+    if(typeof settings.volume === 'number') {
+        console.log(settings.volume + 20)
+    }
+
     console.log(`Volume: ${settings.volume !== undefined ? settings.volume : "default"}`);
     console.log(`Brightness: ${settings.brightness !== undefined ? settings.brightness : "default"}`);
 }

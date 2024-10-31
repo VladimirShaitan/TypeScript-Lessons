@@ -32,7 +32,7 @@ const admin: Admin = {
 /*-----------------------------------------------------------------
 Приклад 3: Псевдоніми типів з функціями
  -----------------------------------------------------------------*/
-type Operation = (a: number, b: number) => number;
+type Operation = (...args: number[]) => number;
 
 const add: Operation = (a, b) => a + b;
 const subtract: Operation = (a, b) => a - b;

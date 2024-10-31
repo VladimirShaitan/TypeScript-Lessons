@@ -13,7 +13,7 @@ const person: ImmutablePerson = { id: 1, name: "Alice" };
 type ReadonlyArray<T> = ReadonlyArray<T>;
 
 const numbers: ReadonlyArray<number> = [1, 2, 3];
-// numbers.push(4); // Помилка: метод "push" не може бути викликаний
+numbers.push(4); // Помилка: метод "push" не може бути викликаний
 
 
 /*-----------------------------------------------------------------

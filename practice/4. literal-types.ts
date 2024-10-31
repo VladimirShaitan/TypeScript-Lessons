@@ -1,5 +1,4 @@
 // Приклад 1:
-
 type Color = "red" | "green" | "blue";
 
 function setColor(color: Color) {
@@ -29,9 +28,9 @@ log("This is an error message", "error");
  -----------------------------------------------------------------*/
 type HTTPMethod = "GET" | "POST" | "PUT" | "DELETE";
 
-function makeRequest(method: HTTPMethod, url: string) {
+function makeRequest(method: HTTPMethod, url: string): void {
     console.log(`Making ${method} request to ${url}`);
 }
 
-makeRequest("GET", "https://api.example.com");
+// makeRequest("GET", "https://api.example.com");
 // makeRequest("PATCH", "https://api.example.com"); // Помилка: значення "PATCH" не входить до типу HTTPMethod
