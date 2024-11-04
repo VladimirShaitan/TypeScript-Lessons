@@ -43,7 +43,6 @@ enum OrderStatus {
     Delivered,
     Cancelled,
 }
-
 function updateOrderStatus(status: OrderStatus) {
     if (status === OrderStatus.Pending) {
         console.log("Order is pending.");
